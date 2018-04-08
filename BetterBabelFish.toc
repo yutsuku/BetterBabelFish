@@ -1,0 +1,9 @@
+## Interface: 20100
+## Title: Better Bable Fish -- by Zayla of Dethecus
+## Version: 2.5
+## Author: Anonymous
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## Notes: Better bable talk between factions or not... whatever you like.
+## SavedVariables: BetterBableFish_Debug, BetterBableFish_PlayersSeen
+BetterBabelFish.xml

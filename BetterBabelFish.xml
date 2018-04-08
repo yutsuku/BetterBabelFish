@@ -1,0 +1,29 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/..\FrameXML\UI.xsd">
+  <Script file="BetterBabelFish.lua"/>
+
+  <Frame name="BetterBabelFish_MainFrame" parent="UIParent" hidden="false">
+    <Scripts>
+      <OnLoad>
+         this:RegisterEvent("VARIABLES_LOADED");
+      </OnLoad>
+      <OnEvent>
+         if (event == "VARIABLES_LOADED") then
+           BetterBabelFish_Init();
+         end
+      </OnEvent>
+    </Scripts>
+  </Frame>
+
+
+  <Frame name="BetterBabelFish_Tooltip" parent="GameTooltip" hidden="false">
+    <Scripts>
+      <OnShow>
+        BetterBabelFish__OnShow();
+      </OnShow>
+    </Scripts>
+  </Frame>
+</Ui>
+
+
+
+
