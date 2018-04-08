@@ -1,4 +1,4 @@
-## Interface: 20100
+## Interface: 11200
 ## Title: Better Bable Fish -- by Zayla of Dethecus
 ## Version: 2.5
 ## Author: Anonymous

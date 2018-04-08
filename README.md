@@ -8,11 +8,11 @@ Your message will be translated into gibberish and then sent in the "say" or "ye
 
 The original Bable Fish has a few problems:
 
-	1- With the old version you would see both the original message and the gibberish.  This makes it hard to talk because the gibberish tends to scroll the conversation off the screen.  This addon hides the gibberish so you only see the translations.
-
-	2- With the old version all messages, regardless of faction or say/yell, look the same once translated.  This addon shows them in the same format as other yells and says and also retains the language indicator so that you can easily tell if the speaker is your faction or the other.  Messages are marked with a |BF| or [BF] depending on which version of Bable Fish the speaker is using.
-
-	3- The old version has a few bugs because some the gibberish strings it used would translate form Orkish to Common with non-letter symbols in them.  The result is that a message with symbols such as an equal sign won't translate from Orkish to Horde.  This new addon, works around the problem so that if either speaker or listener (or both) has the new addon then the message will work fine.
+	1 - With the old version you would see both the original message and the gibberish.  This makes it hard to talk because the gibberish tends to scroll the conversation off the screen.  This addon hides the gibberish so you only see the translations.
+	
+	2 - With the old version all messages, regardless of faction or say/yell, look the same once translated.  This addon shows them in the same format as other yells and says and also retains the language indicator so that you can easily tell if the speaker is your faction or the other.  Messages are marked with a |BF| or [BF] depending on which version of Bable Fish the speaker is using.
+	
+	3 - The old version has a few bugs because some the gibberish strings it used would translate form Orkish to Common with non-letter symbols in them.  The result is that a message with symbols such as an equal sign won't translate from Orkish to Horde.  This new addon, works around the problem so that if either speaker or listener (or both) has the new addon then the message will work fine.
 
 Note: This Better Bable Fish is fully compatible with the original Bable Fish.  So if you have it you can talk to people with both this new and the original versions.
 

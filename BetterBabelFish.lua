@@ -8,6 +8,7 @@ BetterBableFish_PlayerName = "Unknown";
 -----------------------------------------------------------------------------------------------------------
 
 local BetterBableFish_OriginalSetItemRef;
+local strfind = string.gfind
 
 function BetterBableFish_DebugMessage(msg) 
   BetterBableFish_Debug = BetterBableFish_Debug .. "++ " .. msg;
@@ -199,7 +200,7 @@ function BetterBableFish_DecodeBable(message, speaker)
   local word;
   local decoded = "";
   local char, pendChar = nil;
-  for word in string.gmatch(xmessage, "[xX]+") do
+  for word in strfind(xmessage, "[xX]+") do
     char = BetterBableFish_BackwardMap[word];
 
     if (not char) then
@@ -209,7 +210,7 @@ function BetterBableFish_DecodeBable(message, speaker)
     if ((pendChar == "'") and (char == "'")) then
       decoded = decoded .. pendChar .. char; 
       pendChar = nil;
-    elseif ((pendChar == "'") and (string.match(char,"%l"))) then
+    elseif ((pendChar == "'") and (strfind(char,"%l"))) then
       decoded = decoded .. string.upper(char);
       pendChar = nil;
     else
@@ -393,7 +394,7 @@ function BetterBableFish_StringMunge(s)
     local hsh = "";
     local len = string.len(s);
     for i = 1, len, 1 do
-      hsh = hsh .. (lst[i] * 11) % 25;
+      hsh = math.fmod(hsh .. (lst[i] * 11), 25);
     end
     return hsh, lst;
   end
@@ -449,12 +450,12 @@ local modulus    = 39506227;
 
 local function quickpow(n,e,m)
   if (e == 1) then 
-    return n % m;
+    return math.fmod(n, m);
   end
-  if ((e % 2) == 1) then
-    return ((n % m) * (((quickpow(n,(e-1)/2,m) % m)^2) % m)) % m;
+  if ((math.fmod(e, 2)) == 1) then
+    return math.fmod(((math.fmod(n, m)) * (math.fmod(((math.fmod(quickpow(n,(e-1)/2,m), m))^2), m))), m);
   else
-    return ((quickpow(n,e/2,m) % m)^2) % m;
+    return math.fmod(((math.fmod(quickpow(n,e/2,m), m))^2), m);
   end
 end
 
