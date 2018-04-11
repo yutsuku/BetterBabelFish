@@ -22,6 +22,9 @@ end
 function BetterBabelFish_Init()
 
   BetterBableFish_Debug = "";
+  if not BetterBableFish_PlayersSeen then
+	BetterBableFish_PlayersSeen = {};
+  end
 
   BetterBableFish_RealmName  = GetRealmName();
   BetterBableFish_PlayerName = UnitName("player");
